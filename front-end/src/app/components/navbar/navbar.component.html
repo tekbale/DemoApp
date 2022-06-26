@@ -1,0 +1,28 @@
+<div class="nav-bar">
+  <mat-grid-list cols="10" rowHeight="5rem">
+      <mat-grid-tile 
+          [colspan]="9"
+          [rowspan]="1"
+          [style.background]="''">
+          <h3>TimeClock App</h3>
+      </mat-grid-tile>
+      <mat-grid-tile 
+          [colspan]="1"
+          [rowspan]="1">
+          <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="sidemenu">
+              <mat-icon >menu</mat-icon>
+              {{uid}}
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>account_box</mat-icon>
+                <span>Preferences</span>
+              </button>
+              <button mat-menu-item (click)="logoutUser()">
+                <mat-icon>keyboard_tab</mat-icon>
+                <span>Logout</span>
+              </button>
+            </mat-menu>
+      </mat-grid-tile>
+  </mat-grid-list>
+</div>
